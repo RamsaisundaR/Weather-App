@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather — Detect Location</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Local Weather</h1>
+
+    <section id="card" class="card">
+      <div id="loading" class="loading">Detecting location and fetching weather…</div>
+
+      <div id="weather" class="weather hidden">
+        <div class="top">
+          <div class="place">
+            <h2 id="city"></h2>
+            <p id="coords" class="coords"></p>
+          </div>
+          <div class="temp">
+            <img id="icon" alt="weather icon" />
+            <div>
+              <div id="temp" class="temp-value"></div>
+              <div id="description" class="desc"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="details">
+          <div>Humidity: <span id="humidity"></span>%</div>
+          <div>Wind: <span id="wind"></span> m/s</div>
+          <div>Pressure: <span id="pressure"></span> hPa</div>
+        </div>
+
+        <div class="actions">
+          <button id="refreshBtn">Refresh</button>
+          <button id="retryGeoBtn">Retry Location</button>
+        </div>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+    </section>
+
+    <footer>
+      <small>Uses OpenWeatherMap. Requires an API key in <code>script.js</code>.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
